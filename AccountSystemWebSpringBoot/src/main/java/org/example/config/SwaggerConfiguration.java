@@ -30,7 +30,7 @@ public class SwaggerConfiguration {
                 .select()
 
                 .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
-        10
+        
                 .paths(PathSelectors.any())
                 .build()
                 .pathMapping("/")

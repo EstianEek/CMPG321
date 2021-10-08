@@ -15,8 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.Collections;
 @Configuration
 @EnableSwagger2
-@Import(springfox.bean.validators.configuration.BeanValidatorPluginsConfigur
-        ation.class)
+@Import(springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration.class)
 public class SwaggerConfiguration {
     @Value("${swagger.application.version}")
     private String applicationVersion;
@@ -30,7 +29,7 @@ public class SwaggerConfiguration {
                 .select()
 
                 .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
-        
+
                 .paths(PathSelectors.any())
                 .build()
                 .pathMapping("/")

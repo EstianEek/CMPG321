@@ -32,6 +32,12 @@
             <version>4.3.14.RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
     
 </project>

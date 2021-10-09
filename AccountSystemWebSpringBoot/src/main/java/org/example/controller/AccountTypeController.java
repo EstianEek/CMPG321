@@ -1,6 +1,7 @@
 package org.example.controller;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.example.logic.flow.CreateAccountTypeFlow;
@@ -21,14 +22,14 @@ public class AccountTypeController{
 
     private final FetchAccountTypeFlow fetchAccountTypeFlow;
     private final CreateAccountTypeFlow createAccountTypeFlow;
-    private final ModifyAccountTypeFlow modifyAccountTypeFlow;
+//    private final ModifyAccountTypeFlow modifyAccountTypeFlow;
 
 
     @Autowired
     public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow, @Qualifier("createAccountTypeFlowName") CreateAccountTypeFlow createAccountTypeFlow, ModifyAccountTypeFlow modifyAccountTypeFlow){
         this.fetchAccountTypeFlow = fetchAccountTypeFlow;
         this.createAccountTypeFlow = createAccountTypeFlow;
-        this.modifyAccountTypeFlow = modifyAccountTypeFlow;
+//        this.modifyAccountTypeFlow = modifyAccountTypeFlow;
     }
 
     @GetMapping("/All")
@@ -53,10 +54,10 @@ public class AccountTypeController{
             @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class)
     })
     public ResponseEntity<GeneralResponse<AccountTypeDto>> create(
-            @ApiParem(value = "Request body to create a new Account.", required = true)
+            @ApiParam(value = "Request body to create a new Account.", required = true)
             @RequestBody AccountTypeDto accountType){
         List<AccountTypeDto> accountTypeResponse = fetchAccountTypeFlow.create(accountType);
-        GeneralResponse<AccountTypeDto> response = new GeneralResponse<>(true, accountTypeResponse);
+        GeneralResponse<AccountTypeDto> response = new GeneralResponse<AccountTypeDto>(true, accountTypeResponse);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }

@@ -25,8 +25,10 @@ public class AccountType implements Serializable {
     @Column(name = "CREATION_DATE")
     private LocalDate creationDate;
 
-    public AccountType(){
-
+    public AccountType(String mnemonic, String accountTypeName, LocalDate creationDate){
+        this.mnemonic = mnemonic;
+        this.accountTypeName = accountTypeName;
+        this.creationDate = creationDate;
     }
 
     public AccountType(Long accountTypeId, String mnemonic, String accountTypeName, LocalDate creationDate){

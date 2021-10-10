@@ -27,7 +27,6 @@
 
     <modules>
         <module>AccountSystemDomain</module>
-        <module>AccountSystemWeb</module>
         <module>AccountSystemRepository</module>
         <module>AccountSystemTranslator</module>
         <module>AccountSystemLogic</module>
@@ -85,6 +84,11 @@
                 <groupId>com.oracle.database.jdbc</groupId>
                 <artifactId>ojdbc8</artifactId>
                 <version>19.3.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>4.3.14.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

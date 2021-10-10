@@ -1,2 +1,3 @@
-org\example\RepositoryConfig.class
-org\example\AccountTypeRepository.class
+org\example\config\RepositoryConfig.class
+org\example\persistence\AccountTransactionRepository.class
+org\example\persistence\AccountTypeRepository.class

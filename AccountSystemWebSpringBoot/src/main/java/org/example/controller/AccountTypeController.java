@@ -26,7 +26,7 @@ public class AccountTypeController{
 
 
     @Autowired
-    public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow, @Qualifier("createAccountTypeFlowName") CreateAccountTypeFlow createAccountTypeFlow, ModifyAccountTypeFlow modifyAccountTypeFlow){
+    public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow, @Qualifier("createAccountTypeFlowName") CreateAccountTypeFlow createAccountTypeFlow/*, ModifyAccountTypeFlow modifyAccountTypeFlow*/){
         this.fetchAccountTypeFlow = fetchAccountTypeFlow;
         this.createAccountTypeFlow = createAccountTypeFlow;
 //        this.modifyAccountTypeFlow = modifyAccountTypeFlow;
@@ -56,8 +56,8 @@ public class AccountTypeController{
     public ResponseEntity<GeneralResponse<AccountTypeDto>> create(
             @ApiParam(value = "Request body to create a new Account.", required = true)
             @RequestBody AccountTypeDto accountType){
-        List<AccountTypeDto> accountTypeResponse = fetchAccountTypeFlow.create(accountType);
-        GeneralResponse<AccountTypeDto> response = new GeneralResponse<AccountTypeDto>(true, accountTypeResponse);
+        List<AccountTypeDto> accountTypeResponse = fetchAccountTypeFlow.getAllAccountTypes();
+        GeneralResponse<AccountTypeDto> response = new GeneralResponse<AccountTypeDto>(true, (AccountTypeDto) accountTypeResponse);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }

@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="AccountSystemWebSpringBoot" />
         <module name="AccountSystemTranslator" />
-        <module name="AccountSystemWeb" />
         <module name="AccountSystemLogic" />
         <module name="AccountSystemDomain" />
         <module name="AccountSystemRepository" />
@@ -16,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AccountSystem (1)" target="1.5" />
+      <module name="AccountSystemWeb" target="8" />
       <module name="AsccountSystemWebSpringBoot" target="1.5" />
     </bytecodeTargetLevel>
   </component>

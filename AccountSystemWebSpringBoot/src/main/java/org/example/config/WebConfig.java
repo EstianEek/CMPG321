@@ -7,8 +7,8 @@ import org.example.LogicConfig;
 @Import({LogicConfig.class})
 @Configuration
 @ComponentScan(basePackages = {
-        "za.ac.nwu.ac.web.sb.controller",
-        "za.ac.nwu.ac.web.sb.exception"
+        "org.example.controller",
+        "org.example.exception"
 })
 public class WebConfig {
 }

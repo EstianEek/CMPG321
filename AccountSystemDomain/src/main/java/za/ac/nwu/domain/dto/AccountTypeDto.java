@@ -86,16 +86,15 @@ public class AccountTypeDto implements Serializable{
         return creationDate;
     }
 
-//    @Override
-//    public boolean equals(Object o){
-//        if(this == o){
-//            return true;
-//        }
-//        if(o == null || getClass() != o.getClass()){
-//            return false;
-//        }
-//        return Objects.equals(mnemonic, that.mnemonic) && Objects.equals(accountTypeName, that.accountTypeName) && Objects.equals(creationDate, that.creationDate);
-//    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AccountTypeDto that = (AccountTypeDto) o;
+        return Objects.equals(mnemonic, that.mnemonic) &&
+                Objects.equals(accountTypeName, that.accountTypeName) &&
+                Objects.equals(creationDate, that.creationDate);
+    }
 
     @JsonIgnore
     public AccountType getAccountType(){

@@ -33,7 +33,7 @@ public class AccountTypeController{
     }
 
     @GetMapping("/All")
-    @ApiOperation(value = "")
+    @ApiOperation(value = "Gets all the configured Account types", notes = "Returns a list of account types")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Account type returned", response = GeneralResponse.class),
             @ApiResponse(code = 400, message = "Bad Request", response = GeneralResponse.class),
@@ -47,7 +47,7 @@ public class AccountTypeController{
     }
 
     @PostMapping("")
-    @ApiOperation(value = "")
+    @ApiOperation(value = "Creates a new AccountType", notes = "Creates a new AccountType in the DB")
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "The Account type was created successfully", response = GeneralResponse.class),
             @ApiResponse(code = 400, message = "Bad Request", response = GeneralResponse.class),

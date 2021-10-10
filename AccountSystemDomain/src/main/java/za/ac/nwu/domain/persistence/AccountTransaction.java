@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Table(name = "DEMO_ACCOUNT_TYPE", schema = "VITRSA_SANDBOX")
+@Table(name = "ACCOUNT_TRANSACTION", schema = "ESTIAN")
 public class AccountTransaction implements Serializable{
 
     private static final long serialVersionUID = -1420294317019175746L;

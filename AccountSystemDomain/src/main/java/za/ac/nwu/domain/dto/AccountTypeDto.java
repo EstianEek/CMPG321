@@ -36,6 +36,10 @@ public class AccountTypeDto implements Serializable{
         this.setCreationDate(accountType.getCreationDate());
     }
 
+    public AccountTypeDto(AccountTypeDto accountType) {
+
+    }
+
     public void setMnemonic(String mnemonic) {
         this.mnemonic = mnemonic;
     }

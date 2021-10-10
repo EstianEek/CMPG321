@@ -65,7 +65,7 @@ public class AccountTypeController{
 
     @GetMapping("{mnemomic}")
     @ApiOperation(value = "Fetches the specified AccountType", notes = "Fetches the AccountType corresponding to the give mnemonic")
-    @ApiResponse(value = {
+    @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Goal found"),
             @ApiResponse(code = 400, message = "Bad Request", response = GeneralResponse.class),
             @ApiResponse(code = 404, message = "Resource Not Found", response = GeneralResponse.class),

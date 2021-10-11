@@ -1,1 +1,5 @@
+org\example\logic\flow\impl\FetchAccountTypeFlowImpl.class
 org\example\LogicConfig.class
+org\example\logic\flow\FetchAccountTypeFlow.class
+org\example\logic\flow\impl\CreateAccountTypeFLowImpl.class
+org\example\logic\flow\CreateAccountTypeFlow.class

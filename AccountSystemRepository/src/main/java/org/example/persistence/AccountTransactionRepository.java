@@ -18,7 +18,7 @@ public interface AccountTransactionRepository extends JpaRepository <AccountTran
             "       AMOUNT" +
             "   FROM" +
             "       ESTIAN.ACCOUNT_TRANSACTION" +
-            "   WHERE MNEMONIC = :accountTypeId ", nativeQuery = true)
+            "   WHERE ACCOUNT_TYPE_ID = :accountTypeId ", nativeQuery = true)
     AccountType getTransactionIdNativeQuery(Long accountTypeId);
 
     @Query(value = "SELECT" +

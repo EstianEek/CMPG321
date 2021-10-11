@@ -5,6 +5,7 @@ package za.ac.nwu.domain.dto;
 //import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
+import za.ac.nwu.domain.persistence.AccountTransaction;
 import za.ac.nwu.domain.persistence.AccountType;
 
 import java.io.Serializable;
@@ -37,6 +38,10 @@ public class AccountTypeDto implements Serializable{
     }
 
     public AccountTypeDto(AccountTypeDto accountType) {
+
+    }
+
+    public AccountTypeDto(AccountTransaction accountTransaction) {
 
     }
 

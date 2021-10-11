@@ -26,7 +26,7 @@ public interface AccountTransactionRepository extends JpaRepository <AccountTran
             "   FROM" +
             "       AccountTransaction t" +
             "   WHERE t.accountTypeId = :accountTypeId")
-    AccountType getAccountTypeByMnemonic(Long accountTypeId);
+    AccountType getAccountTransactionByMnemonic(Long accountTypeId);
 
     @Query(value = "SELECT new za.ac.nwu.domain.dto.AccountTypeDto(" +
             "       t.memberId" +
@@ -35,5 +35,5 @@ public interface AccountTransactionRepository extends JpaRepository <AccountTran
             "   FROM" +
             "       AccountTransaction t" +
             "   WHERE t.accountTypeId = :accountTypeId")
-    AccountTypeDto getAccountTypeDtoByMnemonic(Long mnemonic);
+    AccountTypeDto getAccountTransactionDtoByMnemonic(Long mnemonic);
 }
